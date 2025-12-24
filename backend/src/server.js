@@ -5,6 +5,7 @@ import { ENV } from "./lib/env.js";
 import { connectDB } from "./lib/db.js";
 import cors from "cors";
 import { functions, inngest } from "./lib/inngest.js";
+import {serve} from "inngest/express";
 
 const app = express();
 
@@ -13,6 +14,7 @@ const app = express();
 // console.log(ENV.DB_URL);
 
 const __dirname = path.resolve();
+
 
 //middleware
 app.use(express.json())
